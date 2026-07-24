@@ -1,0 +1,192 @@
+@import "tailwindcss";
+
+@theme {
+  --color-pieta-deep: #304a36;
+  --color-pieta-green: #5c724c;
+  --color-pieta-sage: #8ea17d;
+  --color-pieta-gold: #d2be87;
+  --color-pieta-ivory: #f7f4eb;
+  --color-pieta-white: #ffffff;
+  --color-pieta-graphite: #28302a;
+  --color-pieta-orange: #d96b32;
+
+  --font-display: "EB Garamond", serif;
+  --font-sans: "Inter", sans-serif;
+}
+
+:root {
+  color: var(--color-pieta-graphite);
+  background: var(--color-pieta-ivory);
+  font-family: var(--font-sans);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  min-width: 320px;
+  scroll-behavior: smooth;
+  background: var(--color-pieta-ivory);
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+  overflow-x: clip;
+  background: var(--color-pieta-ivory);
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button {
+  font: inherit;
+}
+
+.brand-logo {
+  --brand-logo-visible-width: 7.5rem;
+  display: block;
+  position: relative;
+  width: var(--brand-logo-visible-width);
+  height: calc(var(--brand-logo-visible-width) * 0.431);
+  overflow: hidden;
+  transition:
+    width 400ms ease,
+    height 400ms ease;
+}
+
+.brand-logo__image {
+  position: absolute;
+  top: calc(var(--brand-logo-visible-width) * -0.519);
+  left: calc(var(--brand-logo-visible-width) * -0.557);
+  width: calc(var(--brand-logo-visible-width) * 2.389);
+  max-width: none;
+  transition:
+    width 400ms ease,
+    top 400ms ease,
+    left 400ms ease;
+}
+
+.brand-logo--compact {
+  --brand-logo-visible-width: 7rem;
+}
+
+.house-menu-icon {
+  display: block;
+  width: 30px;
+  height: 28px;
+  overflow: visible;
+}
+
+.house-menu-icon__roof,
+.house-menu-icon__body {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  vector-effect: non-scaling-stroke;
+  transition:
+    transform 380ms cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 260ms ease;
+}
+
+.house-menu-icon__roof {
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+.house-menu-icon__body {
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+.house-menu-icon--open .house-menu-icon__roof--left {
+  transform: translate(6px, 7px) rotate(85deg) scale(1.38);
+}
+
+.house-menu-icon--open .house-menu-icon__roof--right {
+  transform: translate(-6px, 7px) rotate(-85deg) scale(1.38);
+}
+
+.house-menu-icon--open .house-menu-icon__body {
+  opacity: 0;
+  transform: translateY(-2px) scale(0.76);
+}
+
+.mobile-menu-list li,
+.mobile-menu-cta {
+  transition:
+    transform 300ms ease,
+    opacity 300ms ease;
+}
+
+.mobile-menu-panel[aria-hidden="true"] .mobile-menu-list li,
+.mobile-menu-panel[aria-hidden="true"] .mobile-menu-cta {
+  opacity: 0;
+  transform: translateY(-8px);
+}
+
+.mobile-menu-panel[aria-hidden="false"] .mobile-menu-list li,
+.mobile-menu-panel[aria-hidden="false"] .mobile-menu-cta {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.mobile-menu-list li:nth-child(1) {
+  transition-delay: 40ms;
+}
+
+.mobile-menu-list li:nth-child(2) {
+  transition-delay: 70ms;
+}
+
+.mobile-menu-list li:nth-child(3) {
+  transition-delay: 100ms;
+}
+
+.mobile-menu-list li:nth-child(4) {
+  transition-delay: 130ms;
+}
+
+.mobile-menu-list li:nth-child(5) {
+  transition-delay: 160ms;
+}
+
+.mobile-menu-list li:nth-child(6) {
+  transition-delay: 190ms;
+}
+
+.mobile-menu-cta {
+  transition-delay: 220ms;
+}
+
+@media (min-width: 80rem) {
+  .brand-logo {
+    --brand-logo-visible-width: 9rem;
+  }
+
+  .brand-logo--compact {
+    --brand-logo-visible-width: 8.5rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-delay: 0ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
