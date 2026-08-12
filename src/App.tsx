@@ -140,18 +140,18 @@ function Hero({
 
 const heroPatients = [
   {
-    src: '/images/content/paciente-gato.png',
-    alt: 'Gato siamês em retrato próximo',
+    src: '/images/content/hero-dog3.webp',
+    alt: 'Cachorro caramelo sentado após o banho e cuidado',
     variant: 'cat',
   },
   {
-    src: '/images/content/paciente-golden.png',
-    alt: 'Golden retriever recebendo carinho durante atendimento',
+    src: '/images/content/hero-golden.webp',
+    alt: 'Golden retriever sentado durante o atendimento',
     variant: 'golden',
   },
   {
-    src: '/images/content/paciente-pequeno.png',
-    alt: 'Cachorro de pequeno porte em retrato',
+    src: '/images/content/hero-shitzu.webp',
+    alt: 'Cachorro pequeno e peludo após os cuidados',
     variant: 'small',
   },
 ]
@@ -279,9 +279,9 @@ function Differentials() {
         >
           <img
             data-motion-parallax="3"
-            src="/images/content/paciente-golden.png"
-            alt="Golden retriever durante um atendimento atencioso"
-            className="absolute inset-0 size-full object-cover object-[50%_28%]"
+            src="/images/content/diferenciais-dog.webp"
+            alt="Cachorro branco passeando no jardim da Clínica Veterinária Pietá"
+            className="absolute inset-0 size-full object-cover object-center"
           />
           <p
             className="differentials-quote absolute inset-x-5 bottom-5 rounded-[18px] px-5 py-4 font-display text-2xl leading-tight sm:text-3xl"
@@ -400,7 +400,7 @@ function Structure() {
           >
             <img
               data-motion-parallax="4"
-              src="/images/content/consultorio-provisorio.png"
+              src="/images/content/estrutura-pieta.webp"
               alt="Consultório organizado da Clínica Veterinária Pietá"
               className="size-full object-cover"
             />
@@ -553,7 +553,7 @@ function Location() {
         >
           <img
             data-motion-parallax="3"
-            src="/images/content/fachada-provisoria.png"
+            src="/images/content/fachada-pieta.webp"
             alt="Fachada verde da Clínica Veterinária Pietá, número 42"
             className="size-full object-cover"
           />
